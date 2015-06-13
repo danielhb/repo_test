@@ -18,11 +18,18 @@ eg, on Ubuntu:
 
 * see nginx.template.conf
 * replace SITENAME with, eg, staging.my-domain.com
+eg sed command:
+sed "s/SITENAME/theciceroni.com/g" deploy_tools/nginx_template.conf | sudo tee /etc/nginx/sites-available/theciceroni.com
+
 
 ## Upstart Job
 
 * see gunicorn-upstart.template.conf
 * replace SITENAME with, eg, staging.my-domain.com
+eg sed command:
+sed "s/SITENAME/theciceroni.com/g" deploy_tools/gunicorn-upstart.template.conf | sudo tee /etc/init/gunicorn-theciceroni.com.conf
+
+
 
 ## Folder structure:
 Assume we have a user account at /home/username
